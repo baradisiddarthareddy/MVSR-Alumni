@@ -1,4 +1,4 @@
-# Alumni Relations Student Website
+# MVSR Alumni Portal
 
 ## Table of Contents
 
