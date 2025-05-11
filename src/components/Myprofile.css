@@ -1,0 +1,466 @@
+/* Layout Container */
+.myprofilecontainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eaf0f8, #f9fbfd);
+  animation: fadeInMain 0.6s ease;
+}
+
+/* Left: Profile Info Section */
+.myprofile-info {
+  flex: 70%;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  animation: slideLeft 0.8s ease;
+  border-right: 1px solid #dce1e7;
+}
+
+/* Right: Messages Panel */
+.myprofile-messages {
+  flex: 30%;
+  padding: 40px 30px;
+  overflow-y: auto;
+  background: rgba(250, 250, 250, 0.85);
+  animation: slideRight 0.8s ease;
+  box-shadow: inset 3px 0 5px rgba(0, 0, 0, 0.03);
+}
+
+/* Header Profile Section */
+.myprofile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: fadeInSlow 1s ease;
+}
+
+.myprofile-header img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin-right: 25px;
+  border: 4px solid #0d6efd;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  animation: popIn 0.8s ease;
+}
+
+.myprofile-info h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #1c1c1c;
+}
+
+.myprofile-info p {
+  margin: 6px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+/* Posts Section */
+.myprofile-posts strong {
+  font-size: 1.6em;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+  display: block;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 5px;
+}
+
+.singlepost {
+  background: linear-gradient(to right, #ffffff, #f7f9fc);
+  border: 1px solid #dcdcdc;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(10px);
+  opacity: 0;
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+.singlepost:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.singlepost img {
+  width: 40%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Message Section Styling */
+.myprofile-messages strong {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.myprofile-messages h4 {
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 1.15em;
+  color: #0d6efd;
+  transition: all 0.2s ease;
+}
+.myprofile-messages h4:hover {
+  color: #094ec1;
+  transform: translateX(3px);
+}
+
+.myprofile-messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.myprofile-messages li {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlideUp 0.4s ease forwards;
+}
+.myprofile-messages li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.myprofile-messages div {
+  margin-bottom: 6px;
+  font-size: 0.96em;
+  color: #444;
+}
+
+/* Button */
+button {
+  padding: 10px 16px;
+  background: linear-gradient(to right, #0d6efd, #2e7eff);
+  color: #fff;
+  font-size: 0.95em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+  background: linear-gradient(to right, #0a58ca, #1a6de0);
+  transform: scale(1.03);
+}
+
+/* Utilities */
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Scrollbar */
+.myprofile-info::-webkit-scrollbar,
+.myprofile-messages::-webkit-scrollbar {
+  width: 8px;
+}
+.myprofile-info::-webkit-scrollbar-thumb,
+.myprofile-messages::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 8px;
+}
+
+/* ================= Animations ================= */
+@keyframes fadeInMain {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .myprofilecontainer {
+    flex-direction: column;
+  }
+
+  .myprofile-info,
+  .myprofile-messages {
+    flex: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .singlepost {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .singlepost img {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.myprofile-messages button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.myprofile-messages button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+}
+/* Right: Messages Panel */
+.myprofile-messages {
+  flex: 30%;
+  padding: 30px 25px;
+  overflow-y: auto;
+  background: rgba(245, 247, 250, 0.95);
+  animation: slideRight 0.8s ease;
+  box-shadow: inset 3px 0 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.myprofile-messages strong {
+  font-size: 1.7em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+  display: block;
+}
+
+.myprofile-messages h4 {
+  cursor: pointer;
+  margin: 14px 0;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #0d6efd;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.myprofile-messages h4::before {
+  content: "📩";
+  font-size: 1.2em;
+}
+
+.myprofile-messages h4:hover {
+  color: #0056b3;
+  transform: translateX(4px);
+}
+
+.myprofile-messages ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.myprofile-messages li {
+  background-color: #fff;
+  border: 1px solid #dcdfe3;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlideUp 0.4s ease forwards;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.myprofile-messages li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.myprofile-messages li > div {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.4;
+}
+
+.myprofile-messages button {
+  padding: 9px 14px;
+  background: linear-gradient(to right, #0d6efd, #2e7eff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 8px;
+}
+
+.myprofile-messages button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+/* Right: Messages Panel */
+.myprofile-messages {
+  flex: 30%;
+  padding: 30px 25px;
+  overflow-y: auto;
+  background: rgba(245, 247, 250, 0.95);
+  animation: slideRight 0.8s ease;
+  box-shadow: inset 3px 0 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.myprofile-messages strong {
+  font-size: 1.7em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+  display: block;
+}
+
+.myprofile-messages h4 {
+  cursor: pointer;
+  margin: 14px 0;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #0d6efd;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.myprofile-messages h4::before {
+  content: "📩";
+  font-size: 1.2em;
+}
+
+.myprofile-messages h4:hover {
+  color: #0056b3;
+  transform: translateX(4px);
+}
+
+.myprofile-messages ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.myprofile-messages li {
+  background-color: #fff;
+  border: 1px solid #dcdfe3;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlideUp 0.4s ease forwards;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.myprofile-messages li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.myprofile-messages li > div {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.4;
+}
+
+.myprofile-messages button {
+  padding: 9px 14px;
+  background: linear-gradient(to right, #0d6efd, #2e7eff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 8px;
+}
+
+.myprofile-messages button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}

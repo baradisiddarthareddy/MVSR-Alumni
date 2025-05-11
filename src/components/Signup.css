@@ -1,0 +1,142 @@
+/* Centered header with logo */
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0f4c75;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 12px;
+}
+
+.college-logo {
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+}
+
+/* Container styles */
+.signupcontainer {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+.signup-page {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 90%;
+  max-height: 700px;
+  font-family: "Arial", sans-serif;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Left section (optional background image can be added) */
+.signup-left {
+  flex: 1;
+  background: linear-gradient(to top right, #3a3a3a, #1a1a1a);
+}
+
+/* Right section */
+.signup-right {
+  flex: 1;
+  background: #ede8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.signup-right h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333333;
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555555;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.select-opt {
+  padding: 5px 10px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.signup-form button {
+  width: 50%;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #45a049;
+}
+
+.signup-link {
+  padding-top: 10px;
+  color: #4caf50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signup-page {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+  }
+
+  .signup-left {
+    display: none;
+  }
+
+  .signup-right {
+    width: 100%;
+  }
+
+  .signup-form button {
+    width: 100%;
+  }
+}

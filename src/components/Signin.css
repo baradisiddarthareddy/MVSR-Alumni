@@ -1,0 +1,180 @@
+/* Full page container */
+/* Full page container with animated background */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ffffff, #948f8f, #ffffff);
+  background-size: 600% 600%;
+  animation: animatedGradient 10s ease infinite, fadeInUp 0.9s ease forwards;
+
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Central login box */
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+/* Heading */
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #0f4c75;
+}
+
+/* Form styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #00b894;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 184, 148, 0.2);
+  outline: none;
+}
+
+/* Button */
+.login-form button {
+  padding: 12px;
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 206, 201, 0.3);
+}
+
+/* Link */
+.signup-link {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #00b894;
+}
+
+.signup-link a {
+  color: #00b894;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.signup-link a:hover {
+  color: #0984e3;
+  text-decoration: underline;
+}
+
+/* Header link */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #0f4c75;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.college-logo {
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+}
+
+
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+
+  .login-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .home {
+    font-size: 1.1rem;
+  }
+}

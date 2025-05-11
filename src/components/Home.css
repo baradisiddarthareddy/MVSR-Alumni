@@ -1,0 +1,208 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a237e; /* Professional blue */
+  padding: 20px 40px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.college-logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.college-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn-header {
+  background-color: #ffffff;
+  color: #1a237e;
+  padding: 10px 20px;
+  margin-left: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-header:hover {
+  background-color: #c5cae9;
+  transform: translateY(-2px);
+}
+
+/* College Info Section */
+.college-info {
+  flex: 1;
+  height: 90vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("../assets/background.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-text {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: #1a237e;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.welcome-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.welcome-text p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1a237e; /* Matching header */
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-link {
+  color: #c5cae9;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .welcome-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .welcome-text p {
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .header-left,
+  .header-right {
+    margin: 10px 0;
+  }
+
+  .welcome-text {
+    max-width: 95%;
+    padding: 25px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-text p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .footer-link {
+    margin: 5px 10px;
+  }
+}
