@@ -8,6 +8,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
+- [ProjectSnaps](#snaps)
 - [Contributing](#contributing)
 
 
