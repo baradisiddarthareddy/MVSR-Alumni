@@ -117,7 +117,7 @@ To run this project locally, follow these steps:
 - `POST /api/posts/:id/likes` - Like a post
 - `DELETE /api/posts/:id/likes` - Unlike a post
 
-5. **Snaps of this project**:
+## ProjectSnaps
 
 # Interface
 
