@@ -116,6 +116,32 @@ To run this project locally, follow these steps:
 - `POST /api/posts/:id/likes` - Like a post
 - `DELETE /api/posts/:id/likes` - Unlike a post
 
+5. **Snaps of this project**:
+
+# Interface
+
+![Interface(Alumni)](https://github.com/user-attachments/assets/3b55ed0b-4bc0-4d77-9911-9ee3ae26b772)
+
+# signup
+
+![signup](https://github.com/user-attachments/assets/e7c769fc-5592-4074-bec2-4d6a96020579)
+
+# login
+
+![login](https://github.com/user-attachments/assets/63f9e5cc-a83f-474a-876a-5a24992efd0e)
+
+# Dashboard
+
+![dashboard](https://github.com/user-attachments/assets/1a340b41-62c4-4a87-8447-38755c77967a)
+
+
+# Profile
+
+![profile](https://github.com/user-attachments/assets/067fb87d-2d99-47c4-b22a-6dd80ab0b821)
+
+
+
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to update tests as appropriate.
